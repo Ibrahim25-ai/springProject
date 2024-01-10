@@ -12,7 +12,7 @@ pipeline {
         stage('Build ConfigServer') {
             steps {
                 // Get code from your GitHub repository and the ConfigServer folder
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                 dir('ConfigServer') {
                     // Run Maven on a Unix agent.
                     sh "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -52,7 +52,7 @@ pipeline {
         }
         stage('Build registryService') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                  dir('registryService') {
             sh "mvn clean package -DskipTests"
             }
@@ -85,7 +85,7 @@ pipeline {
         }
         stage('Build Gateway-service') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                 dir('Gateway-service') {
                     sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 }
@@ -119,7 +119,7 @@ pipeline {
         }
         stage('Build Evenement-service') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                 dir('Evenement-service') {
                     sh "mvn clean package -DskipTests"
                 }
@@ -153,7 +153,7 @@ pipeline {
         }
         stage('Build Outil-service') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                 dir('Outil-service') {
                     sh "mvn clean package -DskipTests"
                 }
@@ -188,7 +188,7 @@ pipeline {
         }
         stage('Build Publication-service') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                 dir('Publication-service') {
                     sh "mvn clean package -DskipTests"
                 }
@@ -222,7 +222,7 @@ pipeline {
         }
         stage('Build Membre-service') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Ibrahim25-ai/springProject.git']]])
                 dir('Membre-service') {
                     sh "mvn clean package -DskipTests"
                 }
