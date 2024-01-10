@@ -34,17 +34,17 @@ pipeline {
                 dir('ConfigServer') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:config-server-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:config-server-latest .'
                         
                     }
 
                     // Push Docker image
                     script {
                          sh 'docker login -u ibrahim12aze -p ?Rw#.nwf%2wQiE'
-                         sh 'docker push maheribrahim/devops2023:config-server-latest'
+                         sh 'docker push ibrahim12aze/devops2023:config-server-latest'
                           // Run a command inside the Docker container
                        
-                        sh 'docker run -d --net host maheribrahim/devops2023:config-server-latest'
+                        sh 'docker run -d --net host ibrahim12aze/devops2023:config-server-latest'
                     }
                 }
             }
@@ -69,15 +69,15 @@ pipeline {
                 dir('registryService') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:registry-service-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:registry-service-latest .'
                         
                     }
 
                     // Push Docker image
                     script {
                          
-                         sh 'docker push maheribrahim/devops2023:registry-service-latest'
-                         sh 'docker run -d maheribrahim/devops2023:registry-service-latest'
+                         sh 'docker push ibrahim12aze/devops2023:registry-service-latest'
+                         sh 'docker run -d ibrahim12aze/devops2023:registry-service-latest'
                     }
                 }
             }
@@ -103,15 +103,15 @@ pipeline {
                 dir('Gateway-service') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:gateway-service-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:gateway-service-latest .'
                         
                     }
 
                     // Push Docker image
                     script {
                        
-                         sh 'docker push maheribrahim/devops2023:gateway-service-latest'
-                         sh 'docker run -d maheribrahim/devops2023:gateway-service-latest'
+                         sh 'docker push ibrahim12aze/devops2023:gateway-service-latest'
+                         sh 'docker run -d ibrahim12aze/devops2023:gateway-service-latest'
                     }
                 }
             }
@@ -137,15 +137,15 @@ pipeline {
                 dir('Evenement-service') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:evenement-service-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:evenement-service-latest .'
                         
                     }
 
                     // Push Docker image
                     script {
                          
-                         sh 'docker push maheribrahim/devops2023:evenement-service-latest'
-                         sh 'docker run -d maheribrahim/devops2023:evenement-service-latest'
+                         sh 'docker push ibrahim12aze/devops2023:evenement-service-latest'
+                         sh 'docker run -d ibrahim12aze/devops2023:evenement-service-latest'
                     }
                 }
             }
@@ -171,7 +171,7 @@ pipeline {
                 dir('Outil-service') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:outil-service-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:outil-service-latest .'
                         
                         
                     }
@@ -179,8 +179,8 @@ pipeline {
                     // Push Docker image
                     script {
                          
-                         sh 'docker push maheribrahim/devops2023:outil-service-latest'
-                         sh 'docker run -d maheribrahim/devops2023:outil-service-latest'
+                         sh 'docker push ibrahim12aze/devops2023:outil-service-latest'
+                         sh 'docker run -d ibrahim12aze/devops2023:outil-service-latest'
                     }
                 }
             }
@@ -206,15 +206,15 @@ pipeline {
                 dir('Publication-service') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:publication-service-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:publication-service-latest .'
                         
                     }
 
                     // Push Docker image
                     script {
                          
-                         sh 'docker push maheribrahim/devops2023:publication-service-latest'
-                         sh 'docker run -d maheribrahim/devops2023:publication-service-latest'
+                         sh 'docker push ibrahim12aze/devops2023:publication-service-latest'
+                         sh 'docker run -d ibrahim12aze/devops2023:publication-service-latest'
                     }
                 }
             }
@@ -240,15 +240,15 @@ pipeline {
                 dir('Membre-service') {
                     // Build Docker image
                     script {
-                        sh 'docker build -t maheribrahim/devops2023:membre-service-latest .'
+                        sh 'docker build -t ibrahim12aze/devops2023:membre-service-latest .'
                         
                     }
 
                     // Push Docker image
                     script {
                          
-                         sh 'docker push maheribrahim/devops2023:membre-service-latest'
-                         sh 'docker run -d maheribrahim/devops2023:membre-service-latest'
+                         sh 'docker push ibrahim12aze/devops2023:membre-service-latest'
+                         sh 'docker run -d ibrahim12aze/devops2023:membre-service-latest'
                     }
                 }
             }
