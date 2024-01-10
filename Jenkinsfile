@@ -40,7 +40,7 @@ pipeline {
 
                     // Push Docker image
                     script {
-                         sh 'docker login -u ibrahim12aze -p ?Rw#.nwf%2wQiE''
+                         sh 'docker login -u ibrahim12aze -p ?Rw#.nwf%2wQiE'
                          sh 'docker push maheribrahim/devops2023:config-server-latest'
                           // Run a command inside the Docker container
                        
