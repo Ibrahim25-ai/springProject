@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evenement-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evenement-service
+  template:
+    metadata:
+      labels:
+        app: evenement-service
+    spec:
+      containers:
+      - name: evenement-service
+        image: maheribrahim/devops2023:evenement-service-latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: evenement-service
+spec:
+  selector:
+    app: evenement-service
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080

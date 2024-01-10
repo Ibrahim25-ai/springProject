@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: membre-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: membre-service
+  template:
+    metadata:
+      labels:
+        app: membre-service
+    spec:
+      containers:
+      - name: membre-service
+        image: maheribrahim/devops2023:membre-service-latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: membre-service
+spec:
+  selector:
+    app: membre-service
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
